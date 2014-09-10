@@ -1,4 +1,5 @@
-<html>
+<!doctype html>
+<html lang="es_CL">
 <head>
  <meta charset="UTF-8">
 <Title>Formulario de Registro</Title>
