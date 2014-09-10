@@ -1,5 +1,6 @@
 <html>
 <head>
+ <meta charset="UTF-8">
 <Title>Formulario de Registro</Title>
 <style type="text/css">
     body { background-color: #fff; border-top: solid 10px #000;
