@@ -1,6 +1,6 @@
 <html>
 <head>
-<Title>Registration Form</Title>
+<Title>Formulario de Registro</Title>
 <style type="text/css">
     body { background-color: #fff; border-top: solid 10px #000;
         color: #333; font-size: .85em; margin: 20; padding: 20;
@@ -16,12 +16,12 @@
 </style>
 </head>
 <body>
-<h1>Register here!</h1>
-<p>Fill in your name and email address, then click <strong>Submit</strong> to register.</p>
+<h1>Registrate Acá</h1>
+<p>Ingresa nombre y Email y luego haz click en Enviar <strong>Enviar</strong>.</p>
 <form method="post" action="index.php" enctype="multipart/form-data" >
       Name  <input type="text" name="name" id="name"/></br>
       Email <input type="text" name="email" id="email"/></br>
-      <input type="submit" name="submit" value="Submit" />
+      <input type="submit" name="submit" value="Enviar" />
 </form>
 <?php
     // DB connection info
@@ -57,18 +57,18 @@
     catch(Exception $e) {
         die(var_dump($e));
     }
-    echo "<h3>Your're registered!</h3>";
+    echo "<h3>¡Registrado!</h3>";
     }
     // Retrieve data
     $sql_select = "SELECT * FROM registration_tbl";
     $stmt = $conn->query($sql_select);
     $registrants = $stmt->fetchAll();
     if(count($registrants) > 0) {
-        echo "<h2>People who are registered:</h2>";
+        echo "<h2>Personas registradas:</h2>";
         echo "<table>";
-        echo "<tr><th>Name</th>";
+        echo "<tr><th>Nombre</th>";
         echo "<th>Email</th>";
-        echo "<th>Date</th></tr>";
+        echo "<th>Fecha</th></tr>";
         foreach($registrants as $registrant) {
             echo "<tr><td>".$registrant['name']."</td>";
             echo "<td>".$registrant['email']."</td>";
@@ -76,7 +76,7 @@
         }
         echo "</table>";
     } else {
-        echo "<h3>No one is currently registered.</h3>";
+        echo "<h3>Nadie registrado.</h3>";
     }
 ?>
 </body>
